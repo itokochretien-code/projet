@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestion des dépenses</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Gestion des dépenses personnelles</h1>
+
+    <section class="card form-card">
+      <form id="expense-form">
+        <div class="row">
+          <label>Description</label>
+          <input id="desc" type="text" placeholder="Ex: Café" required>
+        </div>
+        <div class="row">
+          <label>Montant (€)</label>
+          <input id="amount" type="number" step="0.01" placeholder="Ex: 2.50" required>
+        </div>
+        <div class="row">
+          <label>Catégorie</label>
+          <select id="category">
+            <option value="Nourriture">Nourriture</option>
+            <option value="Transport">Transport</option>
+            <option value="Internet">Internet</option>
+            <option value="Études">Études</option>
+            <option value="Santé">Santé</option>
+            <option value="Loisirs">Loisirs</option>
+            <option value="Autres">Autres</option>
+          </select>
+        </div>
+        <div class="actions">
+          <button id="add-btn" type="submit">Ajouter</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card list-card">
+      <h2>Liste des dépenses</h2>
+      <div class="table-wrap">
+        <table id="expenses-table">
+          <thead>
+            <tr><th>Description</th><th>Montant</th><th>Catégorie</th><th></th></tr>
+          </thead>
+          <tbody id="expenses-body"></tbody>
+        </table>
+      </div>
+      <div class="total">Total : <span id="total">0.00</span> €</div>
+    </section>
+
+    <footer class="footer">Petit projet simple — LocalStorage utilisé pour sauvegarder</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
